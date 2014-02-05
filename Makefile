@@ -12,3 +12,11 @@ pkg-compare:
 clean:
 	rm -f pkg-compare
 
+install:
+	install -m 0755 -g wheel -o root pkg-compare ${PREFIX}/bin
+	-install -m 0644 -g wheel -o root pkg-compare.7 ${man7dir}
+
+deinstall:
+	rm -f ${PREFIX}/bin/pkg-compare
+	rm -f ${man7dir}/pkg-compare.7
+
