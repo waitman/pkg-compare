@@ -16,7 +16,7 @@ Command line switches:
 Upgrade Strategy:
 
 # mv /usr/local /usr/old-local
-# mv /var/db/pkg /usr/db/old-pkg
+# mv /var/db/pkg /var/db/old-pkg
 # cd /usr/ports/ports-mgmt/pkg
 # make
 # make install clean
@@ -71,7 +71,7 @@ Command line switches:\n \
 \t-p\tprefix uninstalled packages with 'pkg install'\n\n \
 Upgrade Strategy:\n\n \
 # mv /usr/local /usr/old-local\n \
-# mv /var/db/pkg /usr/db/old-pkg\n \
+# mv /var/db/pkg /var/db/old-pkg\n \
 # cd /usr/ports/ports-mgmt/pkg\n \
 # make\n \
 # make install clean\n \

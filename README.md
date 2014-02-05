@@ -16,7 +16,7 @@ Command line switches:
 Upgrade Strategy:
 
 # mv /usr/local /usr/old-local
-# mv /var/db/pkg /usr/db/old-pkg
+# mv /var/db/pkg /var/db/old-pkg
 # cd /usr/ports/ports-mgmt/pkg
 # make
 # make install clean
