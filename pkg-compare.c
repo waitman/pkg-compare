@@ -11,7 +11,7 @@ packages in local.sqlite in old_path. If a package is found in old_path which
 is not in new_path then the name of the port is printed, one per line.
 
 Command line switches:
-	-p	prefix uninstalled packages with 'pkg install'
+	-p	prefix uninstalled packages with 'pkg install -Rf'
 
 Upgrade Strategy:
 
@@ -52,7 +52,7 @@ static int callbackchk(void *NotUsed, int argc, char **argv, char **coln) {
 	char *a=NULL;
 	a=map_get(matrix,argv[0]);
 	if (a==NULL) {
-		if (showprefix) printf("pkg install ");
+		if (showprefix) printf("pkg install -Rf ");
 		printf("%s\n",argv[0]);
 	}
 	return 0;
@@ -68,7 +68,7 @@ This program reads local.sqlite in new_path and compares list of installed\n \
 packages in local.sqlite in old_path. If a package is found in old_path which\n \
 is not in new_path then the name of the port is printed, one per line.\n\n \
 Command line switches:\n \
-\t-p\tprefix uninstalled packages with 'pkg install'\n\n \
+\t-p\tprefix uninstalled packages with 'pkg install -Rf'\n\n \
 Upgrade Strategy:\n\n \
 # mv /usr/local /usr/old-local\n \
 # mv /var/db/pkg /var/db/old-pkg\n \

@@ -10,7 +10,7 @@ packages in local.sqlite in old_path. If a package is found in old_path which
 is not in new_path then the name of the port is printed, one per line.
 
 Command line switches:
-        -p      prefix uninstalled packages with 'pkg install'
+        -p      prefix uninstalled packages with 'pkg install -Rf'
 
 Upgrade Strategy:
 
