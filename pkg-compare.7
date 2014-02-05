@@ -1,0 +1,60 @@
+..
+.
+.
+.TH pkg-compare 7 "05 February 2014" "pkg-compare version 1.0.0.0"
+.
+.
+.
+.SH NAME
+.
+.B pkg-compare
+.
+.SH SYNOPSIS
+.
+
+pkg-compare
+
+pkg-compare new_path old_path
+
+pkg-compare -p new_path old_path 
+
+.
+.SH DESCRIPTION
+
+This program reads local.sqlite in new_path and compares list of installed
+packages in local.sqlite in old_path. If a package is found in old_path which
+is not in new_path then the name of the port is printed, one per line.
+
+Command line switches:
+        -p      prefix uninstalled packages with 'pkg install'
+
+Upgrade Strategy:
+
+# mv /usr/local /usr/old-local
+.br
+# mv /var/db/pkg /usr/db/old-pkg
+.br
+# cd /usr/ports/ports-mgmt/pkg
+.br
+# make
+.br
+# make install clean
+.br
+# pkg-compare -p /var/db/pkg /var/db/old-pkg > upgrade.sh
+.br
+# sh upgrade.sh
+
+.
+.SH OPTIONS
+.IP -p
+Prefix each package with 'pkg install'.
+
+.SH FILES
+
+pkg-compare uses local.sqlite which is created/managed by /usr/ports/ports-mgmt/pkg.
+
+.
+.
+.SH AUTHOR
+.
+Manual page by Waitman Gobble
