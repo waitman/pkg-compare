@@ -16,7 +16,7 @@ pkg-compare
 
 pkg-compare new_path old_path
 
-pkg-compare -p new_path old_path 
+pkg-compare -m -p new_path old_path 
 
 .
 .SH DESCRIPTION
@@ -26,7 +26,10 @@ packages in local.sqlite in old_path. If a package is found in old_path which
 is not in new_path then the name of the port is printed, one per line.
 
 Command line switches:
-        -p      prefix each package with 'pkg install -Rf'
+.br
+	-p	prefix each package with 'pkg install -Rf'
+.br
+	-m	show manually installed packages only, no deps
 
 Upgrade Strategy:
 
@@ -40,7 +43,7 @@ Upgrade Strategy:
 .br
 # make install clean
 .br
-# pkg-compare -p /var/db/pkg /var/db/old-pkg > upgrade.sh
+# pkg-compare -p -m /var/db/pkg /var/db/old-pkg > upgrade.sh
 .br
 # sh upgrade.sh
 

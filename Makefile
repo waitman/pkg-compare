@@ -2,7 +2,7 @@ PREFIX?=	/usr/local
 CC?=		clang
 CFLAGS=		-I/usr/local/include
 LDFLAGS=	-L/usr/local/lib -lsqlite3
-man8dir?=	/usr/local/man/man7
+man8dir?=	/usr/local/man/man8
 
 all: pkg-compare
 
