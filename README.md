@@ -12,6 +12,7 @@ is not in new_path then the name of the port is printed, one per line.
 
 Command line switches:
         -p      prefix uninstalled packages with 'pkg install -Rf'
+	-m	show manually installed packages only, no deps
 
 Upgrade Strategy:
 
@@ -20,7 +21,7 @@ Upgrade Strategy:
 # cd /usr/ports/ports-mgmt/pkg
 # make
 # make install clean
-# pkg-compare -p /var/db/pkg /var/db/old-pkg > upgrade.sh
+# pkg-compare -p -m /var/db/pkg /var/db/old-pkg > upgrade.sh
 # sh upgrade.sh
 
 ```
