@@ -1,5 +1,5 @@
 ```
-pkg-compare.c 1.0.0.0 2014-02-05
+pkg-compare.c 1.1 2014-02-05
 
 Copyright 2014 Waitman Gobble <ns@waitman.net>
 see LICENSE for details
