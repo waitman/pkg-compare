@@ -123,7 +123,6 @@ int main(int argc, char **argv){
 		return 1; /* bye */
 	}
 		
-	printf("%i\n",argc);
 	sprintf(old_path,"%s/local.sqlite",argv[--argc]);
 	sprintf(new_path,"%s/local.sqlite",argv[--argc]);
 
