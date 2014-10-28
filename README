@@ -20,6 +20,9 @@ Upgrade Strategy:
 # cd /usr/ports/ports-mgmt/pkg
 # make
 # make install clean
+# cd /usr/ports/databases/sqlite3
+# make
+# make install clean
 # pkg-compare -p -m /var/db/pkg /var/db/old-pkg > upgrade.sh
-# sh upgrade.sh
+# yes | sh upgrade.sh
 

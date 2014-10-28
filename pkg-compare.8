@@ -43,9 +43,15 @@ Upgrade Strategy:
 .br
 # make install clean
 .br
+# cd /usr/ports/databases/sqlite3
+.br
+# make
+.br
+# make install clean
+.br
 # pkg-compare -p -m /var/db/pkg /var/db/old-pkg > upgrade.sh
 .br
-# sh upgrade.sh
+# yes | sh upgrade.sh
 
 .
 .SH OPTIONS
@@ -54,7 +60,7 @@ Prefix each package with 'pkg install -Rf'.
 
 .SH FILES
 
-pkg-compare uses local.sqlite which is created/managed by /usr/ports/ports-mgmt/pkg.
+pkg-compare uses local.sqlite which is created/managed by /usr/ports/ports-mgmt/pkg (maybe not anymore?).
 
 .
 .

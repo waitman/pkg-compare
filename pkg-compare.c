@@ -22,8 +22,11 @@ Upgrade Strategy:
 # cd /usr/ports/ports-mgmt/pkg
 # make
 # make install clean
+# cd /usr/ports/databases/sqlite3
+# make
+# make install clean
 # pkg-compare -p -m /var/db/pkg /var/db/old-pkg > upgrade.sh
-# sh upgrade.sh
+# yes | sh upgrade.sh
 
 */
 
@@ -106,11 +109,11 @@ int main(int argc, char **argv){
 			case 'p': /* use prefix */
 				showprefix = 1;
 				++more; /* discount this param */
-				printf("showprefix\n");
+				printf("# option showprefix\n");
 				break;
 			case 'm': /* only manually installed pkgs */
 				showmanual = 1;
-				printf("showmanual\n");
+				printf("# option showmanual\n");
 				++more; /* discount this param */
 				break;
 			default:
